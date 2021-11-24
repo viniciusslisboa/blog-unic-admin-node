@@ -72,4 +72,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <a href="https://www.instagram.com/vnsoaresl" alt="Instagram" target="_blank">
   <img src="https://img.shields.io/badge/-Instagram-DF0174?style=for-the-badge&labelColor=DF0174&logo=instagram&logoColor=white&link=https://www.instagram.com/vnsoaresl" target="_blank">
 </a>
+
 [![Gmail Badge](https://img.shields.io/badge/-v.soares.lisboa@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:v.soares.lisboa@gmail.com)](mailto:v.soares.lisboa@gmail.com)
