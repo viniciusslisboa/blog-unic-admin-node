@@ -2,10 +2,10 @@
     <a href="https://nodejs.org/">🔗 Node.js</a>
 </h1>
 <p align="center">🚀 Aplicação contruída em Node.js para blog pessoal</p>
-
-<img src="https://img.shields.io/badge/npm%20-v8.1.1-blue" alt="Badge"/>
-<img src="https://img.shields.io/apm/l/npm" alt="Badge"/>
-
+<div display="flex" align="center">
+  <img src="https://img.shields.io/badge/npm%20-v8.1.1-blue" alt="Badge"/>
+  <img src="https://img.shields.io/apm/l/npm" alt="Badge"/>
+</div>
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
