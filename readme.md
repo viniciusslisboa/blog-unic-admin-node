@@ -63,7 +63,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [JavaScript](https://www.javascript.com/)
 
 ### ✍️ Autor 
-<img src="https://avatars.githubusercontent.com/u/86809317?v=4" alt="profile" border-radius="30px">
+<img src="https://avatars.githubusercontent.com/u/86809317?v=4" alt="profile" style="border-radius: 30px;">
 
 [Vinícius Soares](https://github.com/ViniciusSLisboa) 🚀
 
