@@ -1,0 +1,14 @@
+{{#each post}}
+    <div class="py-2 px-2">
+        <div class="col p-4 d-flex flex-column position-static" style="background-color: #F3F1F5; border: 1px solid #afaeaf">
+            <h3 class="mb-0">{{title}}</h3>
+            <div id="date" class="mb-1 mt-1 text-muted">{{createdAt}}</div>
+            <p class="card-text mb-auto text-break">{{description}}</p>
+            <a href="/posts/{{slug}}" class="mt-1">Continue reading</a>
+        </div>
+    </div>
+    {{else}}
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold">No posts registered.</h1>
+        </div>       
+{{/each}}

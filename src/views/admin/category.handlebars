@@ -1,0 +1,28 @@
+<h3 class="mt-4">Category list</h3>
+
+<a href="/admin/category/add"><button class="btn btn-outline-dark mt-2 mb-2">New Category</button></a>
+
+{{#each categ}}
+    <div class="card mt-2 mb-2">
+        <div class="card-body d-flex flex-column">
+            <h4 class="ms-1">{{name}}</h4>
+            <p class="ms-1 fs-5"> Slug | {{slug}}</p>
+            <p class="ms-1 fs-6"> Date |  {{createdAt}}</p>
+            <div class="d-flex flex-row">
+                <a href="/admin/category/edit/{{_id}}" class="link-light"><button class="btn btn-success">Edit category</button></a>
+                <form action="/admin/category/delete" method="post" >
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <button class="btn btn-outline-danger ms-1">Delete category</button>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+{{else}}
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">No categories registered.</h1>
+    </div>        
+        
+
+{{/each}}

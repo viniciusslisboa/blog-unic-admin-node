@@ -1,0 +1,12 @@
+<h1 class="mt-2">Users list</h1>
+{{#each user}}
+  <div class="card mt-2">
+    <div class="card-body pt-1 py-0">
+      <p>Name | {{name}}</p>
+      <p>Email | {{email}}</p>
+      <p>isAdmin | {{isAdmin}}</p>
+      <p>password | {{password}}</p>
+    </div>
+  </div>
+{{else}}
+{{/each}}

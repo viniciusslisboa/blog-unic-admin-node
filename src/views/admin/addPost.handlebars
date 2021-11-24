@@ -1,0 +1,29 @@
+{{#each err}} 
+    <div class="alert alert-danger mt-4">{{err}}</div>
+{{/each}}
+
+<h3 class="ms-1 mt-5">Add New Post</h3>
+<div class="card mt-4 mb-4">
+    <div class="card-body"> 
+        <form action="/admin/posts/new" method="post">
+            <label for="title" class="form-label">Title</label>
+                <input type="text" id="title" name="title" class="form-control mb-4" placeholder="Enter the title here" autocomplete="off">
+            <label for="slug" class="form-label">Slug</label>
+                <input type="text" id="slug" name="slug" class="form-control mb-4" placeholder="Enter the slug" autocomplete="off">
+            <label for="description" class="form-label">Description</label>
+                <input type="text" id="description" name="description" class="form-control mb-4" placeholder="Enter the description" autocomplete="off">
+            <label for="content" class="form-label">Content</label>
+                <textarea name="content" id="content" class="form-control mb-4"></textarea>
+            <label for="categories" class="form-label">Select your category</label>
+                <select name="categories" class="form-control mb-4">
+                    {{#each categ}}
+                        <option value="{{_id}}">{{name}}</option>
+                    {{else}}
+                        <option value="0">No categories registered</option>
+                    {{/each}}
+                </select>
+                <button type="submit" class="btn btn-success">Create</button>
+                 <a href="/admin/posts"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
+        </form>
+    </div>
+</div>

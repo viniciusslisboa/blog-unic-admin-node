@@ -1,0 +1,30 @@
+<h3 class="mt-4">Posts list</h3>
+
+<a href="/admin/posts/add"><button class="btn btn-outline-dark mt-2 mb-2">New Post</button></a>
+
+
+{{#each post}}
+    <div class="card mt-2 mb-2 ">
+        <div class="card-body d-flex flex-column">
+            <h4 class="ms-1">{{title}}</h4>
+            <p class="ms-1">Content | {{content}}</p>
+            <p class="ms-1">Description | {{description}}</p>
+            <p class="ms-1">Category | {{category.name}}</p>
+            <p class="ms-1"> Slug | {{slug}}</p>
+            <div class="d-flex flex-row">
+                <a href="/admin/posts/edit/{{_id}}" class="link-light"><button class="btn btn-success">Edit post</button></a>
+                <form action="/admin/posts/delete" method="post">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <button class="btn btn-outline-danger ms-1">Delete post</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+{{else}}
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">No posts registered.</h1>
+    </div>        
+        
+
+{{/each}}

@@ -1,0 +1,32 @@
+{{#each err}} 
+    <div class="alert alert-danger mt-4">{{err}}</div>
+{{/each}}
+<h3 class="ms-1 mt-5">Edit Post</h3>
+<div class="card mt-4 ">
+    <div class="card-body">
+        <form action="/admin/posts/edit" method="post" >
+            <input type="hidden" name="id" value="{{post._id}}">
+            <label for="title" class="form-label">Title</label>
+                <input type="text" id="title" name="title" class="form-control mb-4" placeholder="Enter the title here" autocomplete="off" value="{{post.title}}">
+            <label for="slug" class="form-label">Slug</label>
+                <input type="text" id="slug" name="slug" class="form-control mb-4" placeholder="Enter the slug" autocomplete="off" value="{{post.slug}}">
+            <label for="description" class="form-label">Description</label>
+                <input type="text" id="description" name="description" class="form-control mb-4" placeholder="Enter the description" autocomplete="off" value="{{post.description}}">
+            <label for="content" class="form-label">Content</label>
+                <textarea name="content" id="content" class="form-control mb-4">{{post.content}}</textarea>
+            <label for="categories" class="form-label">Select your category</label>
+                <select name="categories" class="form-control mb-4">
+                    {{#each categ}}
+                        <option value="{{_id}}">{{name}}</option>
+                    {{else}}
+                        <option value="0">No categories registered</option>
+                    {{/each}}
+                </select>
+                <div class="d-flex flex-column mb-3">
+                    <small class="text_muted">* Don't forget to select the correct category.</small>
+                </div>
+                <button type="submit" class="btn btn-success">Update</button>
+                 <a href="/admin/posts"><button type="button" class="btn btn-outline-danger">Cancel</button></a>
+        </form>
+    </div>
+</div>

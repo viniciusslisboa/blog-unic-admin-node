@@ -1,0 +1,53 @@
+{{#if loggedUser}}
+<div class=" mb-4 rounded-3" >
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Node Blog</h1>
+        <h4 class="">This is a system that simulates a blog and has a CRUD. Using Node.JS + Express + Mongodb.</h4>
+        <hr>
+        <p>Learn and share experiences about technology and computing. Just click on the create account button below</p>
+        <h1>Welcome, {{name}}!</h1>
+        
+      </div>
+    {{#each post}}
+    <div class="py-2 px-2">
+        <div class="col p-4 d-flex flex-column position-static" style="background-color: #F3F1F5; border: 1px solid #afaeaf">
+            <a href="/categorys/{{category.slug}}" class="text-decoration-none" style="color: #7F7C82;"><strong class="d-inline-block mb-2">{{category.name}}</strong></a>
+            <h3 class="mb-0">{{title}}</h3>
+            <div id="date" class="mb-1 mt-1 text-muted">{{createdAt}}</div>
+            <p class="card-text mb-auto text-break">{{description}}</p>
+            <a href="/posts/{{slug}}" class="mt-1">Continue reading</a>
+        </div>
+    </div>
+    {{else}}
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold">No posts registered.</h1>
+        </div>       
+    {{/each}}
+</div>
+{{else}}
+<div class=" mb-4 rounded-3" >
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Node Blog</h1>
+        <h4 class="">This is a system that simulates a blog and has a CRUD. Using Node.JS + Express + Mongodb.</h4>
+        <hr>
+        <p>Learn and share experiences about technology and computing. Just click on the create account button below</p>
+        <a href="auth/register/add"><button class="btn btn-primary btn-lg" style="background: #7F7C82; border: #7F7C82 " type="button">Create account</button></a>
+        
+      </div>
+    {{#each post}}
+    <div class="py-2 px-2">
+        <div class="col p-4 d-flex flex-column position-static" style="background-color: #F3F1F5; border: 1px solid #afaeaf">
+            <a href="/categorys/{{category.slug}}" class="text-decoration-none" style="color: #7F7C82;"><strong class="d-inline-block mb-2">{{category.name}}</strong></a>
+            <h3 class="mb-0">{{title}}</h3>
+            <div id="date" class="mb-1 mt-1 text-muted">{{createdAt}}</div>
+            <p class="card-text mb-auto text-break">{{description}}</p>
+            <a href="/posts/{{slug}}" class="mt-1">Continue reading</a>
+        </div>
+    </div>
+    {{else}}
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold">No posts registered.</h1>
+        </div>       
+    {{/each}}
+</div>
+{{/if}}
