@@ -75,4 +75,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 [![Gmail Badge](https://img.shields.io/badge/-v.soares.lisboa@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:v.soares.lisboa@gmail.com)](mailto:v.soares.lisboa@gmail.com)
 
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-c14438?style=flat-square&logo=Gmail&logoColor=white&link=https://www.instagram.com/vnsoaresl)] 
+![Instagram Badge](https://img.shields.io/badge/-https://www.instagram.com/vnsoaresl-c14438?style=flat-square&logo=Gmail&logoColor=white&link=https://www.instagram.com/vnsoaresl)
