@@ -3,11 +3,11 @@ const router = express.Router();
 const Categories = require("../database/models/Category");
 const Posts = require("../database/models/Post");
 const User = require('../database/models/User')
-const verifyJwt = require('../middlewares/authenticate')
+// const verifyJwt = require('../middlewares/authenticate')
 /* ============CATEGORY============ */
 
 // route list the categories
-router.get("/category", verifyJwt, async (req, res) => {
+router.get("/category", async (req, res) => {
   try {
    const categs = await Categories.find().sort({ createdAt: "desc" });
    res.render("admin/category", { categ: categs });
@@ -19,7 +19,7 @@ router.get("/category", verifyJwt, async (req, res) => {
 });
 
 // route form add category
-router.get("/category/add", verifyJwt, (req, res) => {
+router.get("/category/add", (req, res) => {
   res.render("admin/addCategory");
 });
 
@@ -68,7 +68,7 @@ router.post("/category/new", async (req, res) => {
 });
 
 // route edit category
-router.get("/category/edit/:id", verifyJwt, async (req, res) => {
+router.get("/category/edit/:id", async (req, res) => {
   try {
    const editCateg = await Categories.findOne({ _id: req.params.id });
    res.render("admin/editCategory", { categ: editCateg });
@@ -138,7 +138,7 @@ router.post("/category/delete", async (req, res) => {
 /* ============POSTS============ */
 
 // route list the posts
-router.get("/posts",verifyJwt, async (req, res) => {
+router.get("/posts", async (req, res) => {
   try{
    const posts = await Posts.find({}).populate("category").sort({ createdAt: "desc"})
    res.render("admin/posts", { post: posts })
@@ -148,7 +148,7 @@ router.get("/posts",verifyJwt, async (req, res) => {
 });
 
 // route form add post
-router.get("/posts/add",verifyJwt, async (req, res) => {
+router.get("/posts/add", async (req, res) => {
   const categs = await Categories.find().sort({ createdAt: "desc" });
   res.render("admin/addPost", { categ: categs })
 })
@@ -257,7 +257,7 @@ router.post('/posts/edit', async (req, res) => {
 })
 
 // route edit category
-router.get('/posts/edit/:id',verifyJwt, async (req, res) => {
+router.get('/posts/edit/:id', async (req, res) => {
     try {
         const categs = await Categories.find().sort({ createdAt: "desc" });
         const editPost = await Posts.findOne({ _id: req.params.id })
@@ -271,7 +271,7 @@ router.get('/posts/edit/:id',verifyJwt, async (req, res) => {
 
 /* ============Users============ */
 
-router.get('/users', verifyJwt, async (req, res) => {
+router.get('/users', async (req, res) => {
   const users = await User.find().select('+password').sort({createdAt: "desc"})
   res.render("admin/usersList", {user: users})
 })

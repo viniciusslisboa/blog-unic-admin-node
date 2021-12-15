@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const bodyparser = require('body-parser')
-const handlebars = require('express-handlebars')
+const { engine } = require('express-handlebars')
 const path = require('path')
 const session = require('express-session')
 const flash = require('connect-flash')
@@ -38,7 +38,7 @@ const user = require('./routes/user')
 app.use('/admin', admin)
 app.use('/auth', user)
 // config handlebars
-app.engine('handlebars', handlebars({
+app.engine('handlebars', engine({
     defaultLayout: 'main',
     runtimeOptions: {
         allowProtoPropertiesByDefault: true,

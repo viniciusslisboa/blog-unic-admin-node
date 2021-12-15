@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const authJson = require('../config/auth.json')
+// const authJson = require('../config/auth.json')
 
 const User = require('../database/models/User')
 
@@ -55,7 +55,7 @@ router.post("/register", async (req, res) => {
     } catch (err) {
       console.log(err)
       req.flash("error_msg", "Account cannot be created.")
-      res.redirect('/')
+      return res.redirect('/')
     }
   }
   

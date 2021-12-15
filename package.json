@@ -1,0 +1,25 @@
+{
+  "name": "blog-unic-admin-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ViniciusSLisboa/blog-unic-admin-node.git",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "author": "Vinícius Soares <v.soares.lisboa@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

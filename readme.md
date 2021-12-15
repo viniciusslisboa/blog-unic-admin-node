@@ -34,19 +34,16 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/ViniciusSLisboa/Blog-Pessoal>
+$ git clone <https://github.com/ViniciusSLisboa/blog-unic-admin-node>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd expblog
-
-# Vá para a pasta server
-$ cd src
+$ cd blog-unic-admin-node
 
 # Instale as dependências
-$ npm install
+$ npm install or yarn/ yarn install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run dev
+$ npm run dev or yarn dev
 
 # O servidor inciará na porta:8080 - acesse <http://localhost:8080>
 ```
